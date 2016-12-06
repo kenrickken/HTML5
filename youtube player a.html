@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       <!--Import jQuery before materialize.js-->
+	   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	<script>
+		var list =["https://www.youtube.com/embed/66IkugJn06M","https://www.youtube.com/embed/YLNfGoyrwuc","https://www.youtube.com/embed/eg-WDpVBfTw",
+		"https://www.youtube.com/embed/bNYWw2h5yUE","https://www.youtube.com/embed/qzu3E1yUXEg"]
+		function changeVideo(i){
+		document.getElementById("frame").src = list[i];
+		document.getElementById("P"+i).className = "collection-item active";
+	  }
+	</script>
+    </head>
+
+    <body>
+		<div class="video-container">
+			<iframe id="frame" width="560" height="315" src="https://www.youtube.com/embed/66IkugJn06M" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="collection">
+			<a id="P0" href="javascript:changeVideo(0)" class="collection-item active">TIPIKAL ANAK MUDA INDONESIA</a>
+			<a id="P1" href="javascript:changeVideo(1)" class="collection-item">LOST IN KOMODO ISLAND</a>
+			<a id="P2" href="javascript:changeVideo(2)" class="collection-item">HOW TO BE INDONESIAN CHINESE</a>
+			<a id="P3" href="javascript:changeVideo(3)" class="collection-item">MAN VS BOY</a>
+			<a id="P4" href="javascript:changeVideo(4)" class="collection-item">CHARACTERISTIC OF DIET PEOPLE</a>
+		</div>
+    </body>
+  </html>
